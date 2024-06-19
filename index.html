@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makàra Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        body{
+            background-color: #FFB89A;
+            transition: background-color 3.2s cubic-bezier(0.44, 0, 0.05, 1);
+        }
+        .font-roslindale {
+            font-family: Roslindale,'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            padding: 16px 0;
+            background-color: rgba(8, 8, 8, 0);
+            backdrop-filter: blur(4px);
+        }
+
+        .navbar img {
+            transition: all 0.3s ease;
+        }
+
+        .navbar.shrink img.wordmark {
+            transform: scale(0.88);
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar img {
+                width: 40%;
+            }
+
+            .navbar img.wordmark {
+                width: 80%;
+            }
+        }
+        
+        p.font-inter {
+  margin-top: 2rem; /* Adjust this value to ensure enough space below the heading */
+}
+        .appear {
+            opacity: 0;
+            margin: auto;
+            transform: translateY(5px);
+            transition: opacity 0.9s cubic-bezier(0.44, 0, 0.05, 1), transform 0.9s cubic-bezier(0.44, 0, 0.05, 1); 
+        }   
+        .appear.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+
+
+
+        @media (min-width: 1024px) {
+  .appear {
+    min-height: 50vh; /* 50% of the viewport height */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .appear {
+    min-height: 40vh; /* Adjust as a compromise for tablets */
+  }
+}
+
+@media (max-width: 767px) {
+  .appear {
+    min-height: 32vh; /* 32% of the viewport height for mobile */
+  }
+}
+
+/* Snap behavior */
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.appear {
+  scroll-snap-align: start;
+}
+
+
+
+        .button{
+            background-color: #F25D5D;
+        }
+        .button:hover {
+            background-color: #9C403E;
+        }
+
+        .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tricksword {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(50px);
+  margin-right: 0.08em; /* Adjust spacing between words */
+  line-height: 1.1em;
+}
+
+.tricksword.visible .letter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    </style>
+</head>
+<body class="bg-ffb89a text-1e1e1e">
+
+    <nav class="navbar">
+        <div class="flex flex-col items-center">
+            <img src="images/makara-logo.svg" alt="Makàra Logo" class="logo">
+            <img src="images/makara-wordmark.svg" alt="Makàra Wordmark" class="wordmark mt-2">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section id="section0" class="heading-section flex flex-col items-center justify-center min-h-screen text-center px-6 md:px-20 lg:px-32">
+        <h1 class="font-roslindale display-extrabold text-6xl md:text-7xl lg:text-8xl mb-4 mx-auto max-w-xl" id="animated-heading">
+          <span class="tricksword"><span class="letter">O</span><span class="letter">w</span><span class="letter">n</span></span> 
+          <span class="tricksword"><span class="letter">y</span><span class="letter">o</span><span class="letter">u</span><span class="letter">r</span></span> <br>
+          <span class="tricksword"><span class="letter">c</span><span class="letter">o</span><span class="letter">m</span><span class="letter">p</span><span class="letter">a</span><span class="letter">n</span><span class="letter">y</span><span class="letter">'</span><span class="letter">s</span></span> <br>
+          <span class="tricksword"><span class="letter">f</span><span class="letter">u</span><span class="letter">t</span><span class="letter">u</span><span class="letter">r</span><span class="letter">e</span></span>
+        </h1>   
+      </section>
+
+    <section class="px-6 md:px-20 lg:px-32 space-y-12 pb-24 md:pb-32 lg:pb-56">
+        <div class="flex flex-col appear" id="section1">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl leading-7">Making Decisions is easier when you fiddle with the future.</p>
+                <p class="font-inter text-lg md:text-xl lg:text-2xl leading-7">If the fear and uncertainty of making wrong decisions for your company’s future feel like your bowels when riding a bull out of control; we can turn you into a cowboy with elastic bones, so you can start making less wrong decisions with the same fear.</p>
+                <!-- <div class="mt-14 flex flex-col md:flex-row md:justify-center md:items-center gap-y-2 md:gap-x-6">
+                    <p>In need of some guidance?</p>
+                    <a class="button bg-f25d5 text-white font-inter medium py-2 px-4 rounded-md" href="https://wa.me/447592659046" target="_blank">Message me</a>
+                </div> -->
+                <div class="mt-14 flex flex-col items-center md:flex-row md:justify-center md:items-center gap-y-2 md:gap-x-6">
+                    <p class="text-center">In need of some guidance?</p>
+                    <a class="button bg-f25d5 text-white font-inter medium py-2 px-4 rounded-md text-center" href="https://wa.me/447592659046" target="_blank">Message me</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section2">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">So I offer you a guided walkthrough to plausible futures. We call this (drum roll please) Future Hindsight.</p>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section3">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">Do you prefer 300 pages of trends? Then look somewhere else. Future Hindsight isn’t stronger with more outputs but with brief, well crafted and tailored future scenarios and guidelines that shape your vision.</p>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section4">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">You might think strategic foresight costs an arm and a leg. Not at all, we are open to settle for hands or toes.</p>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section5">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">Strategic Foresight doesn’t rely on coffee grounds, tarot cards or crystal balls (anymore) though it has the type of balls to assist you with your future.</p>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section6">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">The strategic foresight practice requires eyes on their back to see the past, ears on the ground to hear trends and a visible stomach to digest them. That’s why the results are the sh*t.</p>
+            </div>
+        </div>
+        <div class="flex flex-col appear" id="section7">
+            <div class="w-full md:w-12/12 lg:w-6/12 mx-auto">
+                <p class="font-inter text-lg md:text-xl lg:text-2xl">My telepathy lines are full today so please try contacting us through email.</p>
+                <div class="mt-12 flex flex-col md:flex-row md:justify-center md:items-center gap-y-2 md:gap-x-6">
+                    <p class="text-center">Need some guidance?</p>
+                    <button class="button bg-f25d5 text-white font-inter medium py-2 px-4 rounded-md" onclick="openModal()">Contact me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4">
+        <p>Copyright© 2024 Makàra. All rights reserved.</p>
+    </footer>
+
+<!-- Contact Form Modal -->
+<div id="contactModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-8 rounded shadow-lg w-11/12 md:w-2/3 lg:w-1/3 relative">
+        <button class="absolute top-2 right-2 text-black" onclick="closeModal()">✖</button>
+        <h2 class="font-roslindale text-2xl mb-4">Contact me</h2>
+        <form id="contactForm">
+            <div class="mb-4">
+                <label for="name" class="block text-sm">Name</label>
+                <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm">Email</label>
+                <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded" required>
+                <p id="emailError" class="text-red-500 text-sm hidden">The email is spelled incorrectly</p>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm">Message</label>
+                <textarea id="message" name="message" class="w-full border border-gray-300 p-2 rounded" required></textarea>
+            </div>
+            <button type="submit" class="bg-f25d5 text-white font-inter medium py-2 px-4 rounded button">Send</button>
+        </form>
+    </div>
+</div>
+
+       <!-- Scripts -->
+       <script>
+
+window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shrink');
+            } else {
+                navbar.classList.remove('shrink');
+            }
+        });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const words = document.querySelectorAll('#animated-heading .tricksword');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 300); // Delay each word's animation by 300ms
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  words.forEach((word, index) => {
+    observer.observe(word);
+  });
+});
+
+
+
+        const sections = document.querySelectorAll('.appear');
+        const options = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        function openModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').classList.remove('hidden');
+                return;
+            } else {
+                document.getElementById('emailError').classList.add('hidden');
+            }
+
+            fetch('https://script.google.com/macros/s/AKfycbwu3cKIfpmK-sJCayL5bEWSh-gZWcs52W4sZ66Se2AU2loqgrgvmTLqZdu9SDDcgbE/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            }).then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                    closeModal();
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('There was a problem with the submission. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem with the submission. Please try again.');
+            });
+        });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const sections = [
+        { id: 'section0', color: '#FFB89A' },
+        { id: 'section2', color: '#FFE178' },
+        { id: 'section4', color: '#94FD91' },
+        { id: 'section5', color: '#91D6FD' },
+        { id: 'section7', color: '#FFFFFF' }
+    ];
+
+    function changeBodyColor() {
+        let scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        for (let i = 0; i < sections.length; i++) {
+            const section = sections[i];
+            const nextSection = sections[i + 1];
+            const sectionElement = document.getElementById(section.id);
+
+            if (scrollPosition >= sectionElement.offsetTop && (!nextSection || scrollPosition < document.getElementById(nextSection.id).offsetTop)) {
+                body.style.backgroundColor = section.color;
+                break;
+            }
+        }
+    }
+
+    window.addEventListener('scroll', changeBodyColor);
+    changeBodyColor(); // Initially set the correct color based on scroll position
+});
+
+
+
+    </script>
+</body>
+</html>
+</html>
